@@ -45,9 +45,9 @@ public class FlashCards2 {
     private static final int SECOND_GRADE_QUESTIONS_CNT = 7;
     private static final int THIRD_GRADE_QUESTIONS_CNT = 10;
 
-    private static final int FORTH_GRADE_QUESTIONS_CNT = 13;
-    private static final int FIFTH_GRADE_QUESTIONS_CNT = 16;
-    private static final int SIXTH_GRADE_QUESTIONS_CNT = 20;
+    //private static final int FORTH_GRADE_QUESTIONS_CNT = 13; no need
+    private static final int FIFTH_GRADE_QUESTIONS_CNT = 10;
+    private static final int SIXTH_GRADE_QUESTIONS_CNT = 4;
     //set numbers of questions
     //rescaled
 
