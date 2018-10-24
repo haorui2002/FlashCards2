@@ -1,9 +1,9 @@
 /**
  * ============================================================================
  *
- * Class FlashCards
+ * Class FlashCards2
  *
- * File: FlashCards.java
+ * File: FlashCards2.java
  *
  * =============================
  *
@@ -122,8 +122,10 @@ public class FlashCards2 {
             }
             
             else if (studentGrade == FORTH_GRADE) {
-                score = forthGradeFlashCards(kboard, studentName, FORTH_GRADE_QUESTIONS_CNT);
-                reportScore(studentName, score, FORTH_GRADE_QUESTIONS_CNT);
+                score = forthGradeFlashCards(kboard, studentName);
+                //no need for the numbercount
+                reportScore(studentName, score, 13);
+                //when report say 13
             }
             else if (studentGrade == FIFTH_GRADE) {
                 score = fifthGradeFlashCards(kboard, studentName, FIFTH_GRADE_QUESTIONS_CNT);
@@ -321,7 +323,8 @@ public class FlashCards2 {
         return score;
     }
 
-    public static int forthGradeFlashCards(Scanner kboard, String studentName, int numberOfQuestions) //4th
+    public static int forthGradeFlashCards(Scanner kboard, String studentName) //4th
+            //no need for count
     {
 
         System.out.println("\n\n\tI'm here in forthGradeFlashCards.");
