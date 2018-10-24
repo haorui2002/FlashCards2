@@ -21,7 +21,7 @@ import java.util.Scanner;
 import java.util.Random;
 //to have more fun, RANDOM!
 
-public class FlashCards {
+public class FlashCards2 {
     /**
      * -------------------------------
      * Declare Constants
@@ -116,6 +116,11 @@ public class FlashCards {
             // 4. print the marquee
             // 5. print < hit enter to continue >
 
+            else if (studentGrade == THIRD_GRADE) {
+                score = secondGradeFlashCards(kboard, studentName, THIRD_GRADE_QUESTIONS_CNT);
+                reportScore(studentName, score, THIRD_GRADE_QUESTIONS_CNT);
+            }
+            
             else if (studentGrade == FORTH_GRADE) {
                 score = forthGradeFlashCards(kboard, studentName, FORTH_GRADE_QUESTIONS_CNT);
                 reportScore(studentName, score, FORTH_GRADE_QUESTIONS_CNT);
@@ -318,7 +323,30 @@ public class FlashCards {
 
     public static int forthGradeFlashCards(Scanner kboard, String studentName, int numberOfQuestions) //4th
     {
-        System.out.println("I'm here in forthGradeFlashCards.");
+
+        System.out.println("\n\n\tI'm here in forthGradeFlashCards.");
+        int i = 0;
+        while (i < 1 || i > 13 ) //while until correct input
+        {
+            String playTable = getStringInput(kboard, "\n\n\tWhat table to do you want to practice? 1-12 >> ");
+
+            try //convert string to int
+            {
+                // the String to int conversion happens here
+                i = Integer.parseInt(playTable.trim());
+
+                // print out the value after the conversion
+                System.out.println("\n\n\tTable = " + i);
+                //if the students put something else
+            }
+            catch (NumberFormatException nfe)
+            {
+                System.out.println("NumberFormatException: " + nfe.getMessage());
+                System.out.println("Not Valid, Please input again.");
+            }
+        }
+        int intPlayTable = i;
+        //get the value
         int score = 0;
 
         // loop through numberOfQuestions times
@@ -329,19 +357,11 @@ public class FlashCards {
         // 4. determine if the response was correct
         // 5. if correct, increase score by one
         //
-        for (int i = 0; i < numberOfQuestions; i++) {
-            int number1 = (int) (Math.random() * 50);//not too big
-            int number2 = (int) (Math.random() * 10);//not too big
-            clearScreen();
-            if (number2 > number1) {
-                int temp = number2;
-                number2 = number1;
-                number1 = temp;
-            }
+        for (i = 0; i < 13; i++) {
 
-            int studentResult = printEquation(kboard, number1, number2, "*");
+            int studentResult = printEquation(kboard, intPlayTable, i, "*");
 
-            if (studentResult == (number1 * number2))
+            if (studentResult == (intPlayTable * i))
                 score++;
         }
 
@@ -362,8 +382,9 @@ public class FlashCards {
         // 5. if correct, increase score by one
         //
         for (int i = 0; i < numberOfQuestions; i++) {
-            int number1 = (int) (Math.random() * 1000); //not too big
-            int number2 = (int) (Math.random() * 1000); //not too big
+            int number1 = (int) (Math.random() * 100); //not too big
+            int number2 = (int) (Math.random() * 100); //not too big
+            //TODO: q: does rand 100 include 100
             //i guess they need to use calculator
             clearScreen();
             if (number2 > number1) {
@@ -372,15 +393,61 @@ public class FlashCards {
                 number1 = temp;
             }
 
-            int studentResult = printEquation(kboard, number1, number2, "-");
+            int studentResult = printEquation(kboard, number1, number2, "*");
 
-            if (studentResult == (number1 - number2))
+            if (studentResult == (number1 * number2))
                 score++;
         }
 
         return score;
     }
 
+    public static int sixthGradeFlashCards(Scanner kboard, String studentName, int numberOfQuestions) //5th
+    {
+        System.out.println("I'm here in sixthGradeFlashCards.");
+        int score = 0;
+
+        // loop through numberOfQuestions times
+        // 1. clear the screen
+        // 2. generate two random numbers 0-10
+        // 3. print a math equation - mix of addition and subtraction, using the two numbers
+        // 3. retrieve the student's response
+        // 4. determine if the response was correct
+        // 5. if correct, increase score by one
+        //
+        for (int i = 0; i < numberOfQuestions; i++) {
+            int max = 100;
+            int min = 1;
+            Random rand = new Random();
+            int number1 = rand.nextInt((max - min) + 1) + min;
+            int number2 = rand.nextInt((max - min) + 1) + min;
+            //you cannot divide 0, so I use another way to generate numbers
+            //i guess they need to use calculator
+            clearScreen();
+            if (number2 > number1) {
+                int temp = number2;
+                number2 = number1;
+                number1 = temp;
+            }
+
+            if (number1 % number2 != 0)
+            {
+                i -= 1;
+            }
+            else
+            {
+                int studentResult = printEquation(kboard, number1, number2, "/");
+
+                if (studentResult == (number1 / number2))
+                    score++;
+            }
+
+        }
+
+        return score;
+    }
+    
+    /* I did too much
     public static int sixthGradeFlashCards(Scanner kboard, String studentName, int numberOfQuestions) //6th
     {
         System.out.println("I'm here in sixthGradeFlashCards.");
@@ -442,7 +509,7 @@ public class FlashCards {
 
         return score;
     }
-
+    */
 
 
     public static int printEquation ( Scanner kboard, int num1, int num2, String operator )
@@ -488,7 +555,7 @@ public class FlashCards {
 
 
     public static boolean checkForYes ( String inputString )
-            //check if human input is True or False
+    //check if human input is True or False
     {
         return ( "Y".equals ( inputString.toUpperCase()) || "YES".equals (inputString.toUpperCase()) ) ;
     }
