@@ -9,14 +9,14 @@
  *
  * @author: Hally Zhou, under Mr. John Engle's project https://drive.google.com/file/d/1IBtIbnm2hOP4tTL7dGiV-72O1a306gZ-/view with unknown license
  * Course: AP Computer Science - Blue 1
- * Date: October 14, 2018
- * Version: https://github.com/haorui2002/Flashcards/commit/master
+ * Date: October 29, 2018
+ * Version: https://github.com/haorui2002/FlashCards2/commit/master
  * GO CUBS GO
  * I feel like your program is too advance for now, even that is the way that we should write it,
  * which is, reusing repeated codes.
  */
 
-//The Fear of {{{{{{{{{{Luci and Ramen}}}}}}}}}}
+//The Fear of {{{{{{{{{{Luci and Ramen}}}}}}}}}} again after 2 years of not writing in C
 import java.util.Scanner;
 import java.util.Random;
 //to have more fun, RANDOM!
@@ -347,6 +347,7 @@ public class FlashCards2 {
                 System.out.println("NumberFormatException: " + nfe.getMessage());
                 System.out.println("Not Valid, Please input again.");
             }
+            //if they cannot understand direction
         }
         int intPlayTable = i;
         //get the value
@@ -426,7 +427,7 @@ public class FlashCards2 {
             int number2 = rand.nextInt((max - min) + 1) + min;
             //you cannot divide 0, so I use another way to generate numbers
             //i guess they need to use calculator
-            clearScreen();
+           clearScreen();
             if (number2 > number1) {
                 int temp = number2;
                 number2 = number1;
