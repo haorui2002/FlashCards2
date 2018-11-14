@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f11869d8-bc5b-44bf-871c-d1cd6b324172" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FlashCards2.java" beforeDir="false" afterPath="$PROJECT_DIR$/FlashCards2.java" afterDir="false" />
     </list>
@@ -34,12 +33,14 @@
     <session id="1453100333">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.22" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -56,12 +57,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2081" />
+          <entry key="java" value="2929" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2081" />
+          <entry key="JAVA" value="2929" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -78,10 +79,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FlashCards2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="432">
+              <caret line="303" column="22" selection-start-line="303" selection-start-column="22" selection-end-line="303" selection-end-column="22" />
               <folding>
-                <element signature="e#0#21643#0" expanded="true" />
+                <element signature="e#0#24021#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -96,11 +97,21 @@
       <find>SECOND_GRADE</find>
       <find>fifthGrade</find>
       <find>13</find>
+      <find>@param kboard</find>
+      <find>@param studentName</find>
+      <find>@return</find>
+      <find>* @param numberOfQuestions</find>
+      <find>@param operator</find>
     </findStrings>
     <replaceStrings>
       <replace>FlashCards2</replace>
       <replace>THIRD_GRADE</replace>
       <replace>sixthGrade</replace>
+      <replace>@param kboard kboard is where the console can get what input from the keyboard</replace>
+      <replace>@param studentName it's the student name that input at the start</replace>
+      <replace>* @param numberOfQuestions this is the preset value for each of the grade</replace>
+      <replace>* @param numberOfQuestions a preset value which is different for each grade</replace>
+      <replace>@param operator the operator in the equation</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -126,10 +137,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1280" />
-    <option name="height" value="723" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -137,6 +147,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,13 +159,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541436255611" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542213807932" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
@@ -196,16 +206,20 @@
       <workItem from="1540825582536" duration="675000" />
       <workItem from="1540850175618" duration="60000" />
       <workItem from="1541434719204" duration="1270000" />
+      <workItem from="1542170928488" duration="621000" />
+      <workItem from="1542210826581" duration="85000" />
+      <workItem from="1542211326535" duration="964000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4041000" />
+    <option name="totallyTimeSpent" value="5711000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="723" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49863014" visible="true" weight="0.25767368" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49863014" visible="true" weight="0.26979" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -250,10 +264,10 @@
     <entry file="file://$PROJECT_DIR$/Flashcard2.iml" />
     <entry file="file://$PROJECT_DIR$/FlashCards2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="432">
+          <caret line="303" column="22" selection-start-line="303" selection-start-column="22" selection-end-line="303" selection-end-column="22" />
           <folding>
-            <element signature="e#0#21643#0" expanded="true" />
+            <element signature="e#0#24021#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>

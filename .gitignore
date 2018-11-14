@@ -1,2 +1,5 @@
 
 .DS_Store
+*.xml
+out/production/FlashCards2/.idea/workspace.xml
+out/production/FlashCards2/.idea/misc.xml

@@ -191,9 +191,9 @@ public class FlashCards2 {
      */
     /**
      * method: getStringInput can get the string typed into the computer
-     * @param kboard
-     * @param prompt
-     * @return
+     * @param kboard kboard is where the console can get what input from the keyboard
+     * @param prompt prompt is the string which the previous function which called this function
+     * @return (str)expr, what the human input
      */
     public static String getStringInput(Scanner kboard, String prompt) {
         // Create a variable to capture input from the keyboard
@@ -210,10 +210,9 @@ public class FlashCards2 {
 
     /**
      * method: getNumberInput can get the number typed into the computer
-     * @param kboard
-     * @param prompt
-     * @return
-     *
+     * @param kboard kboard is where the console can get what input from the keyboard
+     * @param prompt prompt is the string which the previous function which called this function
+     * @return (str)expr, what the human input
      */
     public static int getNumberInput(Scanner kboard, String prompt) {
 
@@ -231,7 +230,7 @@ public class FlashCards2 {
 
     /**
      * method helloStudent can say hello to student and get student's input about start the program or not
-     * @param kboard
+     * @param kboard kboard is where the console can get what input from the keyboard
      */
     private static void helloStudent(Scanner kboard) {
         System.out.println(MARQUEE);
@@ -252,10 +251,11 @@ public class FlashCards2 {
 
     /**
      * method firstGradeFlashCards: this is the question generator for grade one
-     * @param kboard
-     * @param studentName
-     * @param numberOfQuestions
-     * @return
+     * @param kboard kboard is where the console can get what input from the keyboard
+     * @param studentName it's the student name that input at the start
+     * @param numberOfQuestions a preset value which is different for each grade a preset value which is different for each grade
+     * @return (int)score, which is the student score that return back to calculate the score and convert that to human
+     * language to print out the result
      */
     public static int firstGradeFlashCards(Scanner kboard, String studentName, int numberOfQuestions) {
         System.out.println("I'm here in firstGradeFlashCards.");
@@ -288,10 +288,11 @@ public class FlashCards2 {
 
     /**
      *method secondGradeFlashCards: this is the question generator for grade two
-     * @param kboard
-     * @param studentName
-     * @param numberOfQuestions
-     * @return
+     * @param kboard kboard is where the console can get what input from the keyboard
+     * @param studentName it's the student name that input at the start
+     * @param numberOfQuestions a preset value which is different for each grade this is the preset value for each of the grade
+     * @return (int)score, which is the student score that return back to calculate the score and convert that to human
+     * language to print out the result
      */
     public static int secondGradeFlashCards(Scanner kboard, String studentName, int numberOfQuestions) {
         System.out.println("I'm here in secondGradeFlashCards.");
@@ -320,10 +321,11 @@ public class FlashCards2 {
 
     /**
      * method thirdGradeFlashCards: this is the question generator for grade three
-     * @param kboard
-     * @param studentName
-     * @param numberOfQuestions
-     * @return
+     * @param kboard kboard is where the console can get what input from the keyboard
+     * @param studentName it's the student name that input at the start
+     * @param numberOfQuestions a preset value which is different for each grade
+     * @return (int)score, which is the student score that return back to calculate the score and convert that to human
+     * language to print out the result
      */
     public static int thirdGradeFlashCards(Scanner kboard, String studentName, int numberOfQuestions) {
         System.out.println("I'm here in thirdGradeFlashCards.");
@@ -358,9 +360,10 @@ public class FlashCards2 {
 
     /**
      * method forthGradeFlashCards: this is the question generator for grade four
-     * @param kboard
-     * @param studentName
-     * @return
+     * @param kboard kboard is where the console can get what input from the keyboard
+     * @param studentName it's the student name that input at the start
+     * @return (int)score, which is the student score that return back to calculate the score and convert that to human
+     * language to print out the result
      */
     public static int forthGradeFlashCards(Scanner kboard, String studentName) //4th
             //no need for count
@@ -413,10 +416,11 @@ public class FlashCards2 {
 
     /**
      * method fifthGradeFlashCards: this is the question generator for grade five
-     * @param kboard
-     * @param studentName
-     * @param numberOfQuestions
-     * @return
+     * @param kboard kboard is where the console can get what input from the keyboard
+     * @param studentName it's the student name that input at the start
+     * @param numberOfQuestions a preset value which is different for each grade
+     * @return (int)score, which is the student score that return back to calculate the score and convert that to human
+     * language to print out the result
      */
     public static int fifthGradeFlashCards(Scanner kboard, String studentName, int numberOfQuestions) //5th
     {
@@ -454,10 +458,11 @@ public class FlashCards2 {
 
     /**
      * method sixthGradeFlashCards: this is the question generator for grade six
-     * @param kboard
-     * @param studentName
-     * @param numberOfQuestions
-     * @return
+     * @param kboard kboard is where the console can get what input from the keyboard
+     * @param studentName it's the student name that input at the start
+     * @param numberOfQuestions a preset value which is different for each grade
+     * @return (int)score, which is the student score that return back to calculate the score and convert that to human
+     * language to print out the result
      */
     public static int sixthGradeFlashCards(Scanner kboard, String studentName, int numberOfQuestions) //5th
     {
@@ -504,76 +509,13 @@ public class FlashCards2 {
         return score;
     }
     
-    /* I did too much
-    public static int sixthGradeFlashCards(Scanner kboard, String studentName, int numberOfQuestions) //6th
-    {
-        System.out.println("I'm here in sixthGradeFlashCards.");
-        int score = 0;
-
-        // loop through numberOfQuestions times
-        // 1. clear the screen
-        // 2. generate two random numbers 0-10
-        // 3. print a math equation - mix of addition and subtraction, using the two numbers
-        // 3. retrieve the student's response
-        // 4. determine if the response was correct
-        // 5. if correct, increase score by one
-        //
-        for (int i = 0; i < numberOfQuestions; i++) {
-            int number1 = (int) (Math.random() * 100);//not too big
-            int number2 = (int) (Math.random() * 100);//not too big
-
-            clearScreen();
-
-            if (number2 > number1) {
-                int temp = number2;
-                number2 = number1;
-                number1 = temp;
-            }
-
-            Random r = new Random();
-            int studentResult = 0;
-
-            //my special cooooooooooooooooooool design
-            //i think the students will kill me
-            switch (r.nextInt(3)) {
-                //randomly generate 0-2
-
-                case 0:
-                    studentResult = printEquation(kboard, number1, number2, "+");
-
-                    if (studentResult == (number1 + number2))
-                        score++;
-                    break;
-                case 1:
-                    studentResult = printEquation(kboard, number1, number2, "-");
-
-                    if (studentResult == (number1 - number2))
-                        score++;
-                    break;
-                case 2:
-                    number1 = (int) (Math.random() * 50);//not too big
-                    number2 = (int) (Math.random() * 20);//not too big
-                    studentResult = printEquation(kboard, number1, number2, "*");
-
-                    if (studentResult == (number1 * number2))
-
-                        score++;
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        return score;
-    }
-    */
 
     /**
      * method printEquation: print out the equation that is inputed by the question generators of grade 1 - 6
-     * @param kboard
-     * @param num1
-     * @param num2
-     * @param operator
+     * @param kboard kboard is where the console can get what input from the keyboard
+     * @param num1 the first number in the equation
+     * @param num2 the second number in the equation
+     * @param operator the operator in the equation
      * @return
      */
     public static int printEquation ( Scanner kboard, int num1, int num2, String operator )
@@ -581,6 +523,7 @@ public class FlashCards2 {
         return getNumberInput ( kboard, "\n\n\t" + num1 + " " + operator + " " + num2 + " = " ) ;
         //print num1 operator num2, which is the equation and calculation of the question
     }
+
 
     /**
      * method clearScreen
@@ -596,10 +539,11 @@ public class FlashCards2 {
         }
     }
 
+
     /**
      * method getStudentName: ask student to type their name and return it as string studentName
-     * @param kboard
-     * @return
+     * @param kboard kboard is where the console can get what input from the keyboard
+     * @return (str)studentName which is the student name that a human inputed
      */
     public static String getStudentName ( Scanner kboard )
     {
@@ -610,12 +554,13 @@ public class FlashCards2 {
         //get name
     }
 
+
     /**
      * method getStudentGrade: ask a student to input their grade so that they can be directed to the correct question generator
-     * @param kboard
-     * @param limitLow
-     * @param limitHigh
-     * @return
+     * @param kboard kboard is where the console can get what input from the keyboard
+     * @param limitLow which is the lowest limitation of the grade input which is 1
+     * @param limitHigh which is the highest limitation of the grade input which is 6
+     * @return (int)studentGrade which is the grade that a student input
      */
 
     public static int getStudentGrade ( Scanner kboard, int limitLow, int limitHigh )
@@ -634,8 +579,8 @@ public class FlashCards2 {
 
     /**
      * methid checkForYes: define what means true
-     * @param inputString
-     * @return
+     * @param inputString which is what a human type into the computer
+     * @return (boolean) true or false
      */
     public static boolean checkForYes ( String inputString )
     //check if human input is True or False
@@ -644,11 +589,12 @@ public class FlashCards2 {
     }
     //y or yes = true otherwise false
 
+
     /**
      * method reportScore: a score calculator and print out the score that the student grade
-     * @param studentName
-     * @param score
-     * @param totalQuestions
+     * @param studentName it's the student name that input at the start
+     * @param score which is the score that the student get from previous function
+     * @param totalQuestions which is the questions that the student did in the previous function
      */
     public static void reportScore ( String studentName, int score, int totalQuestions )
     {
